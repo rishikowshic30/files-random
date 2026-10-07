@@ -1,0 +1,56 @@
+Hands-on : Query Business Rule
+Scenario : The logged on must see the incidents only in his location.
+
+Only a personn can approvce something 3if he has approver role.
+Dont add roles to a user,add them to a group, add or remov e the employee to the group.
+
+Best Practices:
+It is better to create a property and use it,Instead of hard-coding values.
+
+
+
+
+(function executeRule(current,previous){
+var incAtt=new GlideRecord('sys_attachment');
+incAtt.addQuery('table_sys_id',current.sys_id);
+incAtt.query();
+if(!incAtt.hasNext()){
+    gs.addErrorMessage("pls add attachment supporting the issue you have reported");
+    current.setAbortAction(true);
+}
+
+})(current,previous);
+
+
+
+
+
+(function executeRule(current,previous){
+    var sctask = new GlideRecord(sc_task);
+    sctask.addActiveQuery();
+    sctask.addQuery('request_item',current.sys_id);
+    sc.query();
+    if(sctask.hasNext())
+    {
+        gs.addErrorMessage('RITM cannot be closed untill there is any open task under it !!');
+    }
+
+})(current,previous);
+
+
+
+
+
+(function executeRule(current,previous){
+    
+    
+
+})(current,previous);
+
+
+classes for server and client side.Glide Classes
+
+
+
+REQ->RITM->SC-Task
+

@@ -1,0 +1,106 @@
+Hands-on Lab
+Create a doamin,company,location and department.
+Create an user and set password.
+
+
+
+How to Create favourites.
+click star on any application or record, use can customize the 
+looks of the favourites.
+
+Event Management
+The external monitering(sunch as nagios,splunk,solarwinds,etc) tools collect the data, sends the alerts and warnings to servicenow. It then correlates the alerts and then assigns the incidents to the respective teams.
+
+
+
+
+Service operations dashboard -> create ur list(here we used problem)
+
+Creating an interaction in Service Operations dashboard.
+Click + and the select new interaction. Input all the details of the interaction and save it. After saving, decide if needs to created as incident, change or problem or close the interaction if required.
+
+Predictive Intelligence - it looks at the past records - predicts - then recommends how to solve - give articles - past solutions.
+
+agent assist
+collaboration(teams via servicenow)
+attachments
+templates(a structure with pre-set values ex:major incident makes the impact, urgency and priority as 1)
+
+what is hardening compliance?
+
+Upgrade console
+U should not directly upgrade the instance, it causes disruption to all the users using the instance.
+When u upgrade ur company instance, the request will be directly sent to servicenow and get scheduled.
+
+Before upgrading, u have to take backup by using update sets.The update set contains all the customizations.
+
+
+Everything in preferences menu
+
+
+impersonate user
+
+elevate role
+security admin -> a additional higher previliege to the admin role. The admin is the highest.
+workspace admin
+
+
+ACL->CRUD
+
+ACL can be applied to:
+1. Table level
+2. Field level
+
+You can change the ACL only with the security_admin role.
+
+sys_db_object is the master table which contains all the tables in the servicenow instance.
+
+Nomenclature:
+
+sys_ -> system defined(pre-existing) tables
+u_ -> user defined table
+x_ -> when a table is created inside an application
+
+module(if u want a table to be searchable by the filter navigator, create an module). Module example: Assign to me
+
+creating a new table. 
+we can create new menus under which we can add the created modules, u can also add modules to the existing ones.
+
+
+we created an menu,module,table, update sets and set acls.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Remind on thursday : ACL
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,105 @@
+ServiceNow - cloud-based enterprise Application, PAAS(Platform as a Service) and AAAS(Application as a Service)
+Low code, no code Platform
+
+L1- 
+L2- ops team
+L3- developers team
+
+ITIL - Information Technology Infrastructure Library        -->Developer needs this credential mandatory
+
+
+
+An instance is a copy o fthe ServiceNow environment specific to a customer.
+
+Three types of environments:
+1.Production - work and support their customers
+2.Non-production - used for developement,testing and experimentation
+3.Development - developers may get their own personal instance for experimentayion and learning the customer's/company's environment.
+
+Start with: 
+Dev Instance(Experiment a new feature)-----then move it to ----->Test Instance(UAT(User Acceptance Test)/RAT(Regression))---after test clearance, move it to---> Production Instance(or live instance)
+
+Classic UI - > Next Experience
+
+Interact with servicenow:
+Dashboards
+workspaces
+portals
+servicenow ui(previously classic UI -> Today it is next experience)
+list
+form 
+knowledge base
+service catalog
+
+
+list view (incident->all) to see all the incidents
+
+
+ITSM:
+incident
+problem
+change
+request
+
+
+Knowledge Base - categories->articles
+Knowledge Article
+
+ServiceNow Community
+
+basic configuration UI16
+
+sys_id -> 32-bit alphanumeric, unique identifier for everything in servicenow
+
+
+How to create a user-profile:
+users->new
+
+
+we use update sets to move from one instance to another.
+
+ST - Single Tenant(one company owns and uses it)
+MT - Multi Tenant(Domain separation plugin, it prevents tenants form accessing other tenants data)
+
+domain->company->foundation data(locations,dept,groups,users,etc.,.)
+
+Note: All applications are available to all the domains.
+
+
+Dont create any profile under global in multi-tenant type instances.
+
+creating a domain with the downloaded plugin
+create a company
+change the domain scope
+create an user
+
+
+1.Domain
+2.Company
+3.Department
+4.Location
+
+user profile
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Some Jargons
+PoC - Proof of concept

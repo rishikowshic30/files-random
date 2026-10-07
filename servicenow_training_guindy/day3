@@ -1,0 +1,92 @@
+Day started with hands-on, creating a table with atleast 12 fields with different types, and make it visible under the filter navigator. Before doing this update sets were created.
+
+
+
+
+
+opened:service desk->incidents
+Learnt:
+list controls(hamburger menu),filters,personalize list(add or remove or reorder fields),Natural language search.
+testing with multiple conditions in filters.
+Breadcrumbs(quick way to remove filters)
+
+Creating a filter and saving it.Also the visibilty of the saved filter.
+
+How to make the created application(table) to other user. U can do that by creating role.
+groupby
+
+
+Visual Task Board(Freeform and Data Driven board)
+
+Process mining in servicenow->Process Mining Workspace
+
+
+
+List Layout
+List Configurations
+list controls
+
+Business rules,Flows
+
+UI policies 
+Data Policy
+
+Dictionary overrides - overriding a child functionality
+change default value to the field
+
+
+Bulk imports,updates and delete. via excel.
+We can also do this with remote update sets.
+
+
+
+UI -> Client Script
+DB -> Server Script
+
+
+On tables,forms,service catalog:
+OnLoad()
+OnChange()
+OnSubmit()
+OnCellEdit() -> only works in list view
+
+
+| Type             | Runs when                              | Common use                           |
+| ---------------- | -------------------------------------- | ------------------------------------ |
+| **onLoad()**     | Form opens                             | Set/default values, hide/show fields |
+| **onChange()**   | A field value changes                  | React to user selections             |
+| **onSubmit()**   | User submits/saves the form            | Validate before saving               |
+| **onCellEdit()** | A field is edited directly from a list | Validate/control inline list edits   |
+
+
+
+Server Script:(an intro)
+
+Business rules
+Script actions
+UI Actions
+
+Languages used in servicenow
+Js
+jelly
+jquery
+jetbeans
+html,css and more
+
+
+Hands on labs:
+
+remote update set
+commit and back out
+client script tasks
+
+
+
+global search
+keyword search in portal
+filter navigator
+
+
+
+zing - servicenow native search engine
+

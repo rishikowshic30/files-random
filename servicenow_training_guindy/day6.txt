@@ -1,0 +1,122 @@
+Classes
+
+A.Server side classes
+
+
+1.GlideRecord(table name or script include name). It is a special java class which can be used in netif javascript class.
+ use that are database operations.
+2.GlideElement - used to operate on individual fields in the glide record.
+    In ServiceNow, GlideElement is an object that represents a single field (column) in a database record. It provides methods to access, manipulate, and retrieve information about that field.
+3.GlideSystem -  GlideSystem, commonly referenced as gs, is a server-side API in ServiceNow that provides utility functions for logging, messaging, user information, date/time operations, system properties, and more.
+4. GlideAggregate - we can use this class to perform database aggregate operations.
+    GlideAggregate is an extension of GlideRecord that is used to perform aggregate operations on records, such as:
+
+COUNT
+SUM
+AVG
+MIN
+MAX
+
+Instead of retrieving every record and calculating values manually, GlideAggregate lets the database do the work, which is much faster and more efficient.
+5.GlideDateTime - 
+GlideDateTime is a ServiceNow API used to work with date and time values. It allows you to:
+
+Get the current date/time
+Add or subtract time
+Compare dates
+Convert between formats
+Handle time zones
+
+It stores date and time in UTC internally and displays them according to the user's time zone.
+
+
+B.Client side classes
+
+1.GlideAjax
+ GlideAjax is a client-side API used to call server-side Script Includes from forms without reloading the page.
+ It helps when you need data from the server (database) in a Client Script, because client scripts cannot directly use GlideRecord on the server.
+2.g_form (glide form)
+ used to customize the form
+3. GlideDialogWindow
+4. GlideModal
+5. GlideURL
+6. GlideList - Used to customize the v2 list
+
+
+
+
+
+
+ITSM(IT Service Management):
+
+A. Incident - Any break or interruptions to the service ur company provides is recorded in the form of incidents
+Ex : Outlook not working
+
+B. Problem (Similiar type of issue reported by many people): 
+ 2 Types of problem tasks: 
+    1.General task 
+    2. RCA(Root cause analysis) task  ---> Finding the cause and then providing a solution
+
+Workaround - temp solution(which is provided when a fix is not available)
+CI-Configuration Item
+CMDB- Configuration Management Database
+
+Known Errors - Already any knowledge in it. Have an available workaround. It means the business runs even with that, its not a source stopper.
+
+C. Change Management
+ Any change/enhancement like that is managed by change management.
+ Flow Designer is used to create a flow steps.
+ 3 Types:
+
+    1.Normal Change 
+        It completes all the processes related to the company processes(all) will be followed.
+        One line :  All the mandatory company processes will be processed.
+    2.Standard Change(Pre-approved) 
+        It is used for minor things like toner change every week for a year. Just add notes. No need for approval everytime.
+    3.Emergency Change (Like P1 INCIDENT(Priority Incident)):
+        Everyone on a team must be available to solve a issue in a time like for a P1 issue. Ex: Production Outage
+        One Line:   A change that must be implemented immediately to restore service or prevent major business impact.
+
+ 
+CAB (Change Advisory Board)
+
+A group responsible for reviewing, assessing, and approving significant changes.
+
+Usually includes:
+
+Change Manager
+Application Owners
+Infrastructure Teams
+Security Teams
+Business Stakeholders
+Testers
+
+CAB will look the below:
+Change Request must contain:
+Implementation Plan
+Business Requirement
+What are the risks(with and without and during)
+Backout Plan(Backout update set)
+
+
+Change Ticket -
+Approvals(incl CAB approval)-> Change Task 
+
+
+ECAB(Emergency Change Advisory Board): They will join in 5mins
+Less Approvals(only less people to perform approval things) quick actions
+
+
+Blackout window:
+A period during which changes are not allowed because business impact would be too high.
+
+Release Management
+
+
+To remind:
+Change Conflict,Change Workbench, Schedule
+
+
+
+
+

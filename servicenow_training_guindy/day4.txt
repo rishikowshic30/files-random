@@ -1,0 +1,88 @@
+Coding Best Practices:Onload, onsubmit -> do not make too many client scripts
+a proper description
+
+
+Onchange and OnCell Edit Hands-on Practice.
+Creating a template.
+
+choice list specification,order, drop with or without none
+
+Isolate scripts: With it, only the mentioned fields are manipulated by the script.
+Without it, the script has access to the global DOM leading to 
+security vulnerability like xss.
+
+g_form - a glide used for client script
+
+start date,end date, must have atleast 3 months gap.
+
+UI policy can also be applied to service catalog but it does not have oncell edit.
+
+
+
+
+Script Include(A server side reusable script)
+Requirement : A reference type field
+
+Business Rules
+1.Display business rule - ex: The logged user can see the incidents on his location.
+2.Query business rule
+
+3.Before - works mostly with before business Rule
+4.After - runs after a query is executed
+
+
+5.Async - It is similar ro the after business rule. But if multiple business rules are running
+it takes time and then provide output.
+
+Where to use async : Scheduled jobs(like bank account freeze). When an output is not immediately required.
+another example, closing an incident when the client within respond within certain days.
+
+
+
+Hands on : Creating Business Rules
+
+
+
+In client script : return false
+In BR : abort action
+
+
+
+current ---> represnts the current table(incident)
+
+
+
+(function executeRule(current,previous/*Null when async*/){
+    current.caller_id="Abel Tuter";
+    current.short_description="Learning BR";
+}) _ some missing line
+
+
+g_scratchpad
+
+
+Form Layout
+Form Design
+Form Builder
+
+
+Query Business Rule - to prevent unauthorized access to the data
+
+
+
+(function executeRule(current, previous /*null when async*/ ) {
+
+    var current_user = gs.getUserID(); // -> used to get the name of the current logged in user
+
+    var usr = new GlideRecord('sys_user');
+
+    usr.addQuery('sys_id', current_user);
+
+    usr.query();
+    if (usr.next()) {
+        current.addQuery('location=', usr.location);
+    }
+
+})(current, previous);
+
+
